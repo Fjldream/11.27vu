@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 //import Home from '../views/Home.vue'
-
+import Manage from  '../views/index/manage'
 Vue.use(VueRouter)
 
 const routes = [
@@ -21,7 +21,14 @@ const routes = [
     {
         path: '/',
         name: 'Index',
-        component: () => import('@/views/Index.vue')
+        component: () => import('@/views/Index.vue'),
+        children:[
+            {   path: 'manage',
+                name:'Manage',
+                component:Manage
+            }
+
+        ]
     },
     {
         path: '/page',
@@ -35,3 +42,4 @@ const router = new VueRouter({
 })
 
 export default router
+

@@ -29,7 +29,7 @@
       </el-header>
       <el-container>
         <el-aside width="200px" ref="aside">
-          <el-menu default-active="1-4-1" class="el-menu-vertical-demo" :class="{'elmenu':!isCollapse}" ref="elmenu" collapse-transition="true"  @open="handleOpen" @close="handleClose" :collapse="isCollapse">
+          <el-menu default-active="1-4-1" class="el-menu-vertical-demo" :class="{'elmenu':!isCollapse}" ref="elmenu"  @open="handleOpen" @close="handleClose" :collapse="isCollapse">
 <!--            <el-submenu index="1">-->
 <!--              <template slot="title">-->
 <!--                <i class="el-icon-location"></i>-->
@@ -48,10 +48,12 @@
 <!--                <el-menu-item index="1-4-1">选项1</el-menu-item>-->
 <!--              </el-submenu>-->
 <!--            </el-submenu>-->
+            <router-link to="/manage">
             <el-menu-item index="2" @click="exchange">
               <i class="el-icon-menu"></i>
               <span slot="title">导航二</span>
             </el-menu-item>
+            </router-link>
             <el-menu-item index="3" disabled>
               <i class="el-icon-document"></i>
               <span slot="title">导航三</span>
@@ -62,8 +64,8 @@
             </el-menu-item>
           </el-menu>
         </el-aside>
-        <el-main ref="main">Main
-
+        <el-main ref="main">
+        <router-view/>
         </el-main>
       </el-container>
     </el-container>
@@ -154,8 +156,6 @@ export default {
 .el-main {
   background-color: #E9EEF3;
   color: #333;
-  text-align: center;
-  line-height: 160px;
   position: absolute;
   left: 200px;
   top: 60px;
