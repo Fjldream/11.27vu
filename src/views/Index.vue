@@ -163,6 +163,7 @@ export default {
   right: 0;
   overflow-y: scroll;
   width: calc(100% - 200px);
+
 }
 /*.el-container{*/
 /*  width: 1920px;*/

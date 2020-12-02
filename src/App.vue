@@ -6,5 +6,8 @@
 </template>
 
 <style lang="scss">
-
+  @font-face {
+    font-family: 'PingFang SC';
+    src: url("assets/font/PingFangRegular.ttf");
+  }
 </style>

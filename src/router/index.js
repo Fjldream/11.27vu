@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 //import Home from '../views/Home.vue'
 import Manage from  '../views/index/manage'
+import longForecast from '../views/page/longForecast'
+import StatisAnalyze from "@/views/page/StatisAnalyze";
 Vue.use(VueRouter)
 
 const routes = [
@@ -33,7 +35,19 @@ const routes = [
     {
         path: '/page',
         name: 'Page',
-        component: () => import('@/views/page.vue')
+        component: () => import('@/views/page.vue'),
+        children:[
+            {
+                path:'/longForecast',
+                name:'longForecast',
+                component:longForecast
+            },
+            {
+                path:'/StatisAnalyze',
+                name:'StatisAnalyze',
+                component:StatisAnalyze
+            }
+        ]
     }
 ]
 
