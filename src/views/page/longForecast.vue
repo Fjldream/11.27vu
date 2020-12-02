@@ -609,21 +609,22 @@ export default {
   },
   methods:{
     drawRadar() {
-      this.myChart = this.$echarts.init(document.getElementById('radar-pic'));
-      this.myLightChart = this.$echarts.init(document.getElementById('radar-light'));
-      this.mycolumn = this.$echarts.init(document.getElementById('column'));
-      this.myLightColumn = this.$echarts.init(document.getElementById('lightColumn'));
       let that = this;
+      that.myChart = that.$echarts.init(document.getElementById('radar-pic'));
+      that.myLightChart = that.$echarts.init(document.getElementById('radar-light'));
+      that.mycolumn = that.$echarts.init(document.getElementById('column'));
+      that.myLightColumn = that.$echarts.init(document.getElementById('lightColumn'));
+
       window.onresize = () => {
         that.myChart.resize();
         that.myLightChart.resize();
         that.mycolumn.resize();
         that.myLightColumn.resize();
       }
-      this.myChart.setOption(this.option);
-      this.myLightChart.setOption(this.lightOption);
-      this.mycolumn.setOption(this.column);
-      this.myLightColumn.setOption(this.lightColumn);
+      that.myChart.setOption(that.option);
+      that.myLightChart.setOption(that.lightOption);
+      that.mycolumn.setOption(that.column);
+      that.myLightColumn.setOption(that.lightColumn);
     },
   },
   mounted() {

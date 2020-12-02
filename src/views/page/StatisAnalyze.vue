@@ -742,9 +742,10 @@ export default {
     },
     //画折线图func
     drawLineChart() {
-      this.lineChart = this.$echarts.init(document.getElementById('lineChart'));
+      let that = this;
+      that.lineChart = that.$echarts.init(document.getElementById('lineChart'));
       window.onresize = function () {
-        this.lineChart.resize();
+        that.lineChart.resize();
       }
       let option = {
         textStyle: {
@@ -844,7 +845,7 @@ export default {
           }
         ]
       };
-      this.lineChart.setOption(option);
+      that.lineChart.setOption(option);
     },
     /*
     * 点击表格行事件
@@ -863,13 +864,13 @@ export default {
     this.drawLineChart();
   },
   beforeDestroy() {
+    let that = this;
     window.removeEventListener('resize',function () {
-      this.lineChart.resize();
+      that.lineChart.resize();
     });
   }
 }
 </script>
-
 <style scoped lang="scss">
 .maxsize {
   width: 100%;
@@ -888,6 +889,10 @@ export default {
   @extend .maxsize;
   display: flex;
   flex-direction: column;
+  animation: opacityD 3s;
+  -o-animation: opacityD 3s;
+  -moz-animation: opacityD 3s;
+  -webkit-animation: opacityD 3s;
 }
 
 /*导航栏*/
