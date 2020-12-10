@@ -144,8 +144,7 @@ export default {
           relateNum: '***',
           passRate: 70,
           maximumRate: 16
-        },
-        {
+        },      {
           id: 5,
           object: '北京',
           modelType: '预测模型5',
@@ -782,7 +781,7 @@ export default {
           nameTextStyle: {
             fontSize: 14,
             fontWeight: 200,
-            padding: 20
+            padding: 10
           },
           axisLine: {
             lineStyle: {

@@ -10,6 +10,11 @@
     font-family: 'PingFang SC';
     src: url("assets/font/PingFangRegular.ttf");
   }
+  @font-face {
+    font-family: 'PingFang SC Medium';
+    src: url("assets/font/PingFangMedium.ttf");
+  }
+
   @keyframes opacityD {
     from{
       opacity: 0;

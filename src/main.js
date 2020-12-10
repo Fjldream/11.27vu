@@ -7,7 +7,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 import 'u-reset.css';
 import $ from 'jquery';
 import echarts from 'echarts';
-
+import "leaflet/dist/leaflet.css"
 
 Vue.config.productionTip = false
 Vue.use(ElementUI);
