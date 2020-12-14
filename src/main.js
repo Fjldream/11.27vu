@@ -13,8 +13,18 @@ Vue.config.productionTip = false
 Vue.use(ElementUI);
 Vue.prototype.$ = $;
 Vue.prototype.$echarts = echarts;
+
+router.beforeEach((to,from,next)=>{
+  from;next();
+  if(to.meta.title){
+    document.title = to.meta.title;
+  }else{
+    document.title = '学习平台';
+  }
+})
 new Vue({
   router,
   store,
   render: h => h(App)
 }).$mount('#app')
+

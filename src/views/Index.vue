@@ -58,10 +58,12 @@
               <i class="el-icon-document"></i>
               <span slot="title">导航三</span>
             </el-menu-item>
+            <router-link to="/displayPlatform">
             <el-menu-item index="4">
               <i class="el-icon-setting"></i>
               <span slot="title">导航四</span>
             </el-menu-item>
+            </router-link>
           </el-menu>
         </el-aside>
         <el-main ref="main">

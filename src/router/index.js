@@ -40,21 +40,29 @@ const routes = [
             {
                 path:'/longForecast',
                 name:'longForecast',
-                component:longForecast
+                component:longForecast,
+
             },
             {
                 path:'/StatisAnalyze',
                 name:'StatisAnalyze',
-                component:StatisAnalyze
+                component:StatisAnalyze,
+                meta:{
+                    title:'统计分析'
+                }
             }
         ]
     },
     {
         path: '/displayPlatform',
         name:'DisplayPlatform',
-        component:()=>import('@/views/ProductionAnalyzeDisplay/ProductionAnalyzeDisplayPlatform')
+        component:()=>import('@/views/ProductionAnalyzeDisplay/ProductionAnalyzeDisplayPlatform'),
+        meta:{
+            title:'高分辨率模式产品分析展示平台'
+        }
     }
 ]
+
 
 const router = new VueRouter({
     routes
