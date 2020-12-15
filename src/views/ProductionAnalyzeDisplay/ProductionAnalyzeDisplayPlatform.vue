@@ -110,15 +110,15 @@ export default {
   data() {
     return {
       modelProductionArr: ['GRAPES-3KM', 'RMAPS-3KM', 'WAPMS-3KM', "GRAPES-10KM", 'RAMPS-9KM', 'GRAPES-9KM'],
-      modelProduction: '',//选择模式产品
+      modelProduction: '',//选择模式产品*
       displayElement: '',
-      displayElementValue:'',//选择显示要素
-      objectiveProduct: '',//客观产品
+      displayElementValue:'',//选择显示要素*
+      objectiveProduct: '',//客观产品*
       elementMore: {title: '', options: [{label: '', value: ''}]},//显示更多组件的传入值
       position: '',//select-more组件的位置
-      patternDate: '',//模式日期
-      startTime:'',//起报时间
-      timerShaft:'',//时间轴的值
+      patternDate: '',//模式日期*
+      startTime:'',//起报时间*
+      timerShaft:'',//时间轴的值*
       timeList:['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24'],
       leftNum:1,//时间轴移动的数值
     }
@@ -127,17 +127,27 @@ export default {
     ElementMore
   },
   methods:{
+    /**
+     * 时间轴移动事件
+     */
     handleTimerShaftLeft(){
       if(this.leftNum>-350){
         this.leftNum -=120;
         this.$refs.timerShaftMask.style.left = this.leftNum+'px';
       }
     },
+    /**
+     * 时间轴移动事件
+     */
     handleTimerShaftRight(){
       if(this.leftNum<0){
       this.leftNum +=120;
       this.$refs.timerShaftMask.style.left = this.leftNum+'px';}
     },
+    /**
+     * select-more组件传值函数
+     * @param data 子组件传递的值
+     */
     changeDisplayElement(data){
       this.displayElementValue = data;
     }
